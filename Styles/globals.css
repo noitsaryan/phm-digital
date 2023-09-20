@@ -10,4 +10,50 @@
 
 body {
     background: #f8f8f8;
+    scroll-behavior: smooth;
 }
+
+/* Define the styles for the scrollbar track (the background) */
+::-webkit-scrollbar {
+    width: 2px; /* Set the width of the scrollbar */
+}
+
+/* Define the style of the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background-color: #fc0404; /* Color of the thumb */
+    border-radius: 5px; /* Rounded corners for the thumb */
+}
+
+/* Define the style of the scrollbar track when the thumb is being hovered over */
+
+.animation {
+    overflow: hidden;
+    width: 100%; /* Adjust the width of your container */
+  }
+  
+  .slider {
+    display: flex;
+    animation: slide 12s linear infinite ; /* Adjust the animation duration and timing function as needed */
+  }
+  .slider2 {
+    display: flex;
+    animation: slide2 12s linear infinite ; /* Adjust the animation duration and timing function as needed */
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%); /* Slide images to the left */
+    }
+  }
+  @keyframes slide2 {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0); /* Slide images to the left */
+    }
+  }
+  

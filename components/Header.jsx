@@ -53,7 +53,7 @@ function Header() {
             }
         </div>
         <CgMenuRight className='md:hidden text-dark' size={30} onClick={openMenu} />
-        <div className='bg-bg h-screen w-screen fixed top-0 -left-full menu'>
+        <div className='bg-bg h-screen w-screen z-10 fixed top-0 -left-full menu'>
             <CgClose className='absolute top-12 right-12 text-dark' onClick={closeMenu} size={30}  /> 
             <div className='flex items-center flex-col justify-center h-screen space-y-5'>
             {
