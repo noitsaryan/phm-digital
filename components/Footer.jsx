@@ -5,7 +5,7 @@ import React from 'react'
 function Footer() {
     return (
         <>
-            <footer className='grid md:grid-cols-3 gap-8 md:px-44 px-8 grid-cols-1 py-4'>
+            <footer className='grid md:grid-cols-3 gap-8 md:px-44 px-8 grid-cols-1 py-4 border-t '>
                 <div>
                     <Image src='/logo.png' width={300} height={10} alt='logo' className='w-44 h-auto' />
                     <p className='font-medium'>
