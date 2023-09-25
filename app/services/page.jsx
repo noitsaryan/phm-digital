@@ -4,6 +4,7 @@ import React from 'react'
 function Services() {
   const servicesData = [
     {
+      image: '/Press Release.png',
       topic: "Press Release",
       subtopics: [
         "News Coverages",
@@ -13,10 +14,12 @@ function Services() {
       ]
     },
     {
+      image: '/Advertising.png',
       topic: "Advertising",
       subtopics: ["Full 360-degree online & offline marketing"]
     },
     {
+      image: '/Social Media.png',
       topic: "Social Media",
       subtopics: [
         "Social Media Management (Fb&IG)",
@@ -24,6 +27,7 @@ function Services() {
       ]
     },
     {
+      image: '/Creativity.png',
       topic: "Creativity",
       subtopics: [
         "Graphic Designing",
@@ -33,6 +37,7 @@ function Services() {
       ]
     },
     {
+      image: '/Brand.png',
       topic: "Brand",
       subtopics: [
         "Brand Management",
@@ -41,6 +46,7 @@ function Services() {
       ]
     },
     {
+      image: '/Artist.png',
       topic: "Artist",
       subtopics: [
         "Artist Management",
@@ -61,20 +67,20 @@ function Services() {
         {
           servicesData.map((e, i) => {
             return <div key={i} className={`md:flex ${i % 2 === 0 ? 'flex-row-reverse' : ''} items-center justify-center md:space-x-12`}>
-            <Image src='https://letsinfluence.io/assets/home-page/landing-img.webp' alt='Services' width={900} height={100} className='h-auto  md:max-w-lg' />
-            <div className='px-4 text-center md:text-left'>
-              <h1 className='text-3xl font-black  text-dark'>
-                {e.topic}<span className='text-primary'>.</span>
-              </h1>
-              {
-                e.subtopics.map((e, i) => {
-                  return <p key={i} className=' text-dark font-medium'>
-                  {e}
-                </p>
-                })
-              }
+              <Image src={e.image} alt='Services' width={900} height={100} className='h-auto max-w-xs mx-auto md:mx-0 md:max-w-sm' />
+              <div className='px-4 text-center md:text-left'>
+                <h1 className='text-3xl font-black  text-dark'>
+                  {e.topic}<span className='text-primary'>.</span>
+                </h1>
+                {
+                  e.subtopics.map((e, i) => {
+                    return <p key={i} className=' text-dark font-medium'>
+                      {e}
+                    </p>
+                  })
+                }
+              </div>
             </div>
-          </div>
           })
         }
       </section>

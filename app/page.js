@@ -97,7 +97,7 @@ function Home() {
           </button>
         </div>
         <Image
-          src='https://github.githubassets.com/images/modules/site/issues/illo/issues-plan.png?width=1000&format=webpll'
+          src='/home.png'
           width={1500}
           height={0}
           alt='bg'
