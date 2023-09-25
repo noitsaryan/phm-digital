@@ -67,7 +67,7 @@ function Services() {
         {
           servicesData.map((e, i) => {
             return <div key={i} className={`md:flex ${i % 2 === 0 ? 'flex-row-reverse' : ''} items-center justify-center md:space-x-12`}>
-              <Image src={e.image} alt='Services' width={900} height={100} className='h-auto max-w-xs mx-auto md:mx-0 md:max-w-sm' />
+              <Image src={e.image} alt='Services' width={900} height={100} className='h-auto max-w-[250px] mx-auto md:mx-0 md:max-w-sm' />
               <div className='px-4 text-center md:text-left'>
                 <h1 className='text-3xl font-black  text-dark'>
                   {e.topic}<span className='text-primary'>.</span>
