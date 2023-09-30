@@ -1,5 +1,8 @@
+'use client'
+import Brand from '@/components/Brand';
+import Influencer from '@/components/Influencer';
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   FaBullseye,
   FaUsers,
@@ -11,6 +14,9 @@ import {
   FaHandHoldingHeart
 } from 'react-icons/fa'
 function Home() {
+  const [brand, setBrand] = useState(false);
+  const [influencer, setInfluencer] = useState(false)
+
   const principles = [
     {
       icon: <FaBullseye className='mx-1 text-primary' />,
@@ -54,7 +60,6 @@ function Home() {
     }
   ];
 
-
   const images = [
     'https://letsinfluence.io/assets/influencers-new/Ranveer-Singh.jpeg',
     'https://letsinfluence.io/assets/influencers-new/Ranveer-Singh.jpeg',
@@ -89,10 +94,10 @@ function Home() {
           </p>
         </div>
         <div className='md:space-x-4 flex items-center md:space-y-0 space-y-5 justify-center md:flex-row flex-col'>
-          <button className='bg-primary w-48 text-white px-8 py-2 text-lg font-medium rounded-full'>
+          <button onClick={() => setBrand(prev => !prev)} className='bg-primary w-48 text-white px-8 py-2 text-lg font-medium rounded-full'>
             Brand
           </button>
-          <button className='ring-2 ring-inset ring-primary  w-48 text-primary px-8 py-2 text-lg font-medium rounded-full'>
+          <button onClick={() => setInfluencer(prev => !prev)} className='ring-2 ring-inset ring-primary  w-48 text-primary px-8 py-2 text-lg font-medium rounded-full'>
             Influencer
           </button>
         </div>
@@ -229,6 +234,9 @@ function Home() {
           </button>
         </div>
       </div>
+      {
+        brand ? <Brand/> : null || influencer ? <Influencer/> : null
+      }
     </main>
   )
 }
