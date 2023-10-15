@@ -185,7 +185,7 @@ function Home() {
           <div className="absolute h-full w-44 bg-gradient-to-r top-0 left-0 from-white to-transparent z-10" />
           <div className="absolute h-full w-44 bg-gradient-to-l top-0 right-0 from-white to-transparent z-10" />
           <div className=" py-8 bg-white/75 space-x-5 w-full flex items-center justify-center ">
-            <div className="space-x-8 flex items-center ">
+            <div className=" slider space-x-8 flex items-center ">
               {brands.map((e, i) => (
                 <Image
                   key={i}

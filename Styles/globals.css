@@ -57,3 +57,25 @@ body {
     }
   }
   
+/* Apply animation to images on mobile devices */
+@media (max-width: 768px) {
+  .slider {
+    /* overflow-x: auto; */
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Add smooth scrolling on iOS devices */
+    scroll-behavior: smooth; /* Add smooth scrolling behavior */
+  }
+  
+  .slider-item {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+  }
+}
+
+/* Keep it as it is on larger screens (PC) */
+@media (min-width: 769px) {
+  .slider {
+    /* overflow: visible; */
+  }
+}
